@@ -10,9 +10,6 @@
     --text: #1e293b;
     --text-light: #64748b;
     --border: #e2e8f0;
-    --success: #10b981;
-    --warning: #f59e0b;
-    --danger: #ef4444;
 }
 
 * {
@@ -45,8 +42,7 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -135,6 +131,7 @@ body {
     position: relative;
     overflow: hidden;
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
+    padding: 4rem 2rem;
 }
 
 .hero-content {
@@ -262,7 +259,12 @@ body {
 
 /* Sections */
 section {
-    padding: 6rem 2rem;
+    width: 100%;
+    padding: 4rem 2rem;
+}
+
+.section-content {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -308,7 +310,7 @@ section {
 .feature-card:hover {
     border-color: var(--primary);
     box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
-    transform: translateY(-10px) rotateX(5deg);
+    transform: translateY(-10px);
 }
 
 .feature-icon {
@@ -499,8 +501,11 @@ section {
     color: white;
     text-align: center;
     padding: 4rem 2rem;
-    border-radius: 20px;
-    margin: 4rem 2rem;
+}
+
+.cta-content {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .cta h2 {
@@ -718,10 +723,6 @@ section {
         transform: scale(1);
     }
 
-    .cta {
-        margin: 2rem 0;
-    }
-
     .cta h2 {
         font-size: 1.8rem;
     }
@@ -729,7 +730,7 @@ section {
 
 @media (max-width: 480px) {
     section {
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
     }
 
     .hero-title {
@@ -738,5 +739,9 @@ section {
 
     .btn {
         width: 100%;
+    }
+
+    .nav-menu {
+        gap: 1rem;
     }
 }
