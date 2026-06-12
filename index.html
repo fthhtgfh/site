@@ -2,125 +2,71 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Oryzo-like Landing</title>
+  <title>Oryzo Style – Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <div class="logo">Oryzo<span>.</span></div>
-    <nav>
-      <a href="#features">Fonctionnalités</a>
-      <a href="#usecases">Cas d’usage</a>
-      <a href="#pricing">Tarifs</a>
-      <a href="#contact" class="btn-outline">Se connecter</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Accélérez vos décisions avec l’IA.</h1>
-        <p>
-          Une plateforme intelligente pour analyser vos données, automatiser vos workflows
-          et prendre de meilleures décisions en quelques secondes.
-        </p>
-        <div class="hero-actions">
-          <button id="cta-demo" class="btn-primary">Demander une démo</button>
-          <button id="cta-docs" class="btn-ghost">Voir la documentation</button>
-        </div>
-        <p class="hero-note">Aucune carte bancaire requise. Essai gratuit 14 jours.</p>
-      </div>
-      <div class="hero-visual">
-        <div class="card">
-          <h3>Dashboard IA</h3>
-          <p>Insights en temps réel, recommandations et alertes intelligentes.</p>
-          <div class="metrics">
-            <div>
-              <span class="metric-label">Temps gagné</span>
-              <span class="metric-value">+42%</span>
-            </div>
-            <div>
-              <span class="metric-label">Tâches auto.</span>
-              <span class="metric-value">1 280 / mois</span>
-            </div>
-          </div>
-        </div>
-        <div class="floating-tag">⚡ Automatisation no-code</div>
-      </div>
-    </section>
+<header class="nav">
+  <div class="logo">Nova<span>AI</span></div>
+  <nav>
+    <a href="#features">Fonctionnalités</a>
+    <a href="#workflow">Workflows</a>
+    <a href="#pricing">Tarifs</a>
+  </nav>
+</header>
 
-    <section id="features" class="section">
-      <h2>Fonctionnalités clés</h2>
-      <div class="grid-3">
-        <div class="feature-card">
-          <h3>Analyse intelligente</h3>
-          <p>Connectez vos sources de données et obtenez des insights en langage naturel.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Workflows automatisés</h3>
-          <p>Créez des scénarios d’automatisation sans écrire une seule ligne de code.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Sécurité entreprise</h3>
-          <p>Chiffrement, gestion des accès et conformité pour les équipes exigeantes.</p>
-        </div>
-      </div>
-    </section>
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="reveal">L’IA qui accélère votre business.</h1>
+    <p class="reveal delay1">
+      Analyse, automatisation, insights. Tout en un.
+    </p>
+    <button class="btn-primary reveal delay2">Commencer</button>
+  </div>
 
-    <section id="usecases" class="section alt">
-      <h2>Cas d’usage</h2>
-      <div class="grid-2">
-        <div class="usecase">
-          <h3>Ops & Finance</h3>
-          <p>Suivi des KPI, prévisions et alertes automatiques sur les dérives budgétaires.</p>
-        </div>
-        <div class="usecase">
-          <h3>Produit & Data</h3>
-          <p>Analyse comportement utilisateur, tests A/B et recommandations produit.</p>
-        </div>
-      </div>
-    </section>
+  <div class="hero-visual">
+    <div class="floating-card" id="card1"></div>
+    <div class="floating-card" id="card2"></div>
+    <div class="floating-card" id="card3"></div>
+  </div>
+</section>
 
-    <section id="pricing" class="section">
-      <h2>Tarifs simples et transparents</h2>
-      <div class="pricing-card">
-        <h3>Pro</h3>
-        <p class="price">49€ / mois</p>
-        <ul>
-          <li>Jusqu’à 5 membres</li>
-          <li>Workflows illimités</li>
-          <li>Support email prioritaire</li>
-        </ul>
-        <button class="btn-primary">Commencer</button>
-      </div>
-    </section>
+<section id="features" class="section">
+  <h2 class="section-title reveal">Fonctionnalités</h2>
+  <div class="grid">
+    <div class="feature reveal">
+      <h3>Analyse IA</h3>
+      <p>Comprenez vos données en langage naturel.</p>
+    </div>
+    <div class="feature reveal delay1">
+      <h3>Automatisation</h3>
+      <p>Créez des workflows intelligents.</p>
+    </div>
+    <div class="feature reveal delay2">
+      <h3>Monitoring</h3>
+      <p>Recevez des alertes en temps réel.</p>
+    </div>
+  </div>
+</section>
 
-    <section id="contact" class="section alt">
-      <h2>Parlons de votre cas</h2>
-      <form id="contact-form">
-        <div class="form-row">
-          <label>Adresse email</label>
-          <input type="email" id="email" required placeholder="vous@entreprise.com">
-        </div>
-        <div class="form-row">
-          <label>Message</label>
-          <textarea id="message" rows="4" placeholder="Décrivez votre besoin..."></textarea>
-        </div>
-        <button type="submit" class="btn-primary">Envoyer</button>
-        <p id="form-status" class="form-status"></p>
-      </form>
-    </section>
-  </main>
+<section id="workflow" class="section dark">
+  <h2 class="section-title reveal">Workflows intelligents</h2>
+  <div class="workflow-visual reveal delay1"></div>
+</section>
 
-  <footer class="footer">
-    <span>© 2026 Oryzo-like. Tous droits réservés.</span>
-    <span class="footer-links">
-      <a href="#">Confidentialité</a>
-      <a href="#">Conditions</a>
-    </span>
-  </footer>
+<section id="pricing" class="section">
+  <h2 class="section-title reveal">Tarifs</h2>
+  <div class="pricing-card reveal delay1">
+    <h3>Pro</h3>
+    <p class="price">49€/mois</p>
+    <button class="btn-primary">Choisir</button>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
