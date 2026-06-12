@@ -23,7 +23,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// Mobile nav toggle (ajout UI, logique simple)
+// Mobile nav toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
