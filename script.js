@@ -1,48 +1,31 @@
-// Simple interactions "façon SaaS"
+gsap.registerPlugin(ScrollTrigger);
 
-const demoBtn = document.getElementById("cta-demo");
-const docsBtn = document.getElementById("cta-docs");
-const form = document.getElementById("contact-form");
-const statusEl = document.getElementById("form-status");
-
-function smoothScrollTo(selector) {
-  const el = document.querySelector(selector);
-  if (!el) return;
-  window.scrollTo({
-    top: el.offsetTop - 80,
-    behavior: "smooth",
+// Reveal animations
+gsap.utils.toArray(".reveal").forEach((el) => {
+  gsap.to(el, {
+    opacity: 1,
+    y: 0,
+    duration: 1.1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: el,
+      start: "top 85%",
+    }
   });
-}
-
-demoBtn?.addEventListener("click", () => {
-  smoothScrollTo("#contact");
-  statusEl.textContent = "Parlez-nous de votre projet, on vous répond vite.";
-  statusEl.style.color = "#a0a3b1";
 });
 
-docsBtn?.addEventListener("click", () => {
-  alert("Ici tu pourrais rediriger vers ta doc ou un Notion. 😉");
-});
+// Parallax floating cards
+gsap.to("#card1", { y: -40, duration: 4, repeat: -1, yoyo: true, ease: "sine.inOut" });
+gsap.to("#card2", { y: -60, duration: 5, repeat: -1, yoyo: true, ease: "sine.inOut" });
+gsap.to("#card3", { y: -50, duration: 6, repeat: -1, yoyo: true, ease: "sine.inOut" });
 
-form?.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  if (!email) {
-    statusEl.textContent = "Merci d’indiquer une adresse email.";
-    statusEl.style.color = "#ff4d6a";
-    return;
+// Hero parallax on scroll
+gsap.to(".hero-visual", {
+  y: 80,
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    end: "bottom top",
+    scrub: true
   }
-
-  // Simulation d’envoi
-  statusEl.textContent = "Envoi en cours...";
-  statusEl.style.color = "#a0a3b1";
-
-  setTimeout(() => {
-    statusEl.textContent =
-      "Merci ! Votre message a été enregistré (simulation côté front).";
-    statusEl.style.color = "#4ade80";
-    form.reset();
-  }, 900);
 });
