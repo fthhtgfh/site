@@ -1,68 +1,48 @@
-// Scroll reveal
-const reveals = document.querySelectorAll('section > *, .feature-card, .script-card, .plan-card');
-reveals.forEach(el => el.classList.add('reveal'));
+// Simple interactions "façon SaaS"
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 60);
-    }
-  });
-}, { threshold: 0.1 });
+const demoBtn = document.getElementById("cta-demo");
+const docsBtn = document.getElementById("cta-docs");
+const form = document.getElementById("contact-form");
+const statusEl = document.getElementById("form-status");
 
-reveals.forEach(el => observer.observe(el));
-
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const href = a.getAttribute('href');
-    if (!href || href === '#') return;
-    e.preventDefault();
-    const target = document.querySelector(href);
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
-  });
-});
-
-// Mobile nav toggle
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    navToggle.classList.toggle('open');
-  });
-
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      navToggle.classList.remove('open');
-    });
+function smoothScrollTo(selector) {
+  const el = document.querySelector(selector);
+  if (!el) return;
+  window.scrollTo({
+    top: el.offsetTop - 80,
+    behavior: "smooth",
   });
 }
 
-// Parallax / 3D scroll
-const hero = document.querySelector('.hero');
-const heroVisual = document.querySelector('.hero-visual');
-const orbs = document.querySelectorAll('.orb, .hero-glow');
+demoBtn?.addEventListener("click", () => {
+  smoothScrollTo("#contact");
+  statusEl.textContent = "Parlez-nous de votre projet, on vous répond vite.";
+  statusEl.style.color = "#a0a3b1";
+});
 
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY || window.pageYOffset;
-  const height = window.innerHeight || 1;
-  const progress = Math.min(scrollY / height, 1);
+docsBtn?.addEventListener("click", () => {
+  alert("Ici tu pourrais rediriger vers ta doc ou un Notion. 😉");
+});
 
-  if (hero) {
-    hero.style.transform = `translateY(${progress * -20}px)`;
+form?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!email) {
+    statusEl.textContent = "Merci d’indiquer une adresse email.";
+    statusEl.style.color = "#ff4d6a";
+    return;
   }
 
-  if (heroVisual) {
-    const tiltX = progress * 6;
-    const tiltY = -10 + progress * 6;
-    heroVisual.style.transform = `translateZ(40px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-  }
+  // Simulation d’envoi
+  statusEl.textContent = "Envoi en cours...";
+  statusEl.style.color = "#a0a3b1";
 
-  orbs.forEach((orb, index) => {
-    const offset = (index + 1) * 10;
-    orb.style.transform = `translateY(${progress * offset}px) translateZ(-150px)`;
-  });
+  setTimeout(() => {
+    statusEl.textContent =
+      "Merci ! Votre message a été enregistré (simulation côté front).";
+    statusEl.style.color = "#4ade80";
+    form.reset();
+  }, 900);
 });
