@@ -40,3 +40,29 @@ if (navToggle && navLinks) {
     });
   });
 }
+
+// Parallax / 3D scroll
+const hero = document.querySelector('.hero');
+const heroVisual = document.querySelector('.hero-visual');
+const orbs = document.querySelectorAll('.orb, .hero-glow');
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY || window.pageYOffset;
+  const height = window.innerHeight || 1;
+  const progress = Math.min(scrollY / height, 1);
+
+  if (hero) {
+    hero.style.transform = `translateY(${progress * -20}px)`;
+  }
+
+  if (heroVisual) {
+    const tiltX = progress * 6;
+    const tiltY = -10 + progress * 6;
+    heroVisual.style.transform = `translateZ(40px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+  }
+
+  orbs.forEach((orb, index) => {
+    const offset = (index + 1) * 10;
+    orb.style.transform = `translateY(${progress * offset}px) translateZ(-150px)`;
+  });
+});
