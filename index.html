@@ -1,72 +1,260 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Oryzo Style – Demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zefium Hub - Experience the Future</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Zefium</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Get Started</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-<header class="nav">
-  <div class="logo">Nova<span>AI</span></div>
-  <nav>
-    <a href="#features">Fonctionnalités</a>
-    <a href="#workflow">Workflows</a>
-    <a href="#pricing">Tarifs</a>
-  </nav>
-</header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Zefium Hub</h1>
+            <p class="hero-subtitle">Experience the next generation of web innovation</p>
+            <button class="btn btn-primary">Explore Now</button>
+        </div>
+        <div class="hero-background">
+            <div class="floating-cube cube-1"></div>
+            <div class="floating-cube cube-2"></div>
+            <div class="floating-cube cube-3"></div>
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+    </section>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1 class="reveal">L’IA qui accélère votre business.</h1>
-    <p class="reveal delay1">
-      Analyse, automatisation, insights. Tout en un.
-    </p>
-    <button class="btn-primary reveal delay2">Commencer</button>
-  </div>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="section-header">
+            <h2>Powerful Features</h2>
+            <p>Everything you need to succeed</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card" data-tilt>
+                <div class="feature-icon">🚀</div>
+                <h3>Lightning Fast</h3>
+                <p>Optimized performance for blazing fast load times and smooth interactions</p>
+            </div>
+            <div class="feature-card" data-tilt>
+                <div class="feature-icon">🎨</div>
+                <h3>Design Excellence</h3>
+                <p>Beautiful, modern UI with attention to every pixel and detail</p>
+            </div>
+            <div class="feature-card" data-tilt>
+                <div class="feature-icon">🔒</div>
+                <h3>Secure & Safe</h3>
+                <p>Enterprise-grade security to protect your data and privacy</p>
+            </div>
+            <div class="feature-card" data-tilt>
+                <div class="feature-icon">📱</div>
+                <h3>Responsive</h3>
+                <p>Perfect on any device, from mobile phones to large screens</p>
+            </div>
+            <div class="feature-card" data-tilt>
+                <div class="feature-icon">⚙️</div>
+                <h3>Customizable</h3>
+                <p>Fully customizable to match your brand and requirements</p>
+            </div>
+            <div class="feature-card" data-tilt>
+                <div class="feature-icon">🌍</div>
+                <h3>Global Scale</h3>
+                <p>Built for global reach with multi-language and multi-currency support</p>
+            </div>
+        </div>
+    </section>
 
-  <div class="hero-visual">
-    <div class="floating-card" id="card1"></div>
-    <div class="floating-card" id="card2"></div>
-    <div class="floating-card" id="card3"></div>
-  </div>
-</section>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive solutions for your needs</p>
+        </div>
+        <div class="services-container">
+            <div class="service-item" data-service="1">
+                <div class="service-number">01</div>
+                <h3>Web Development</h3>
+                <p>Custom web applications built with cutting-edge technologies</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-item" data-service="2">
+                <div class="service-number">02</div>
+                <h3>Design & UX</h3>
+                <p>User-centric design that creates memorable experiences</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-item" data-service="3">
+                <div class="service-number">03</div>
+                <h3>Consulting</h3>
+                <p>Expert guidance to transform your digital vision into reality</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-item" data-service="4">
+                <div class="service-number">04</div>
+                <h3>Support & Maintenance</h3>
+                <p>24/7 support and continuous maintenance for peace of mind</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+        </div>
+    </section>
 
-<section id="features" class="section">
-  <h2 class="section-title reveal">Fonctionnalités</h2>
-  <div class="grid">
-    <div class="feature reveal">
-      <h3>Analyse IA</h3>
-      <p>Comprenez vos données en langage naturel.</p>
-    </div>
-    <div class="feature reveal delay1">
-      <h3>Automatisation</h3>
-      <p>Créez des workflows intelligents.</p>
-    </div>
-    <div class="feature reveal delay2">
-      <h3>Monitoring</h3>
-      <p>Recevez des alertes en temps réel.</p>
-    </div>
-  </div>
-</section>
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="section-header">
+            <h2>Simple Pricing</h2>
+            <p>Choose the plan that's right for you</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <div class="price">
+                    <span class="currency">$</span>
+                    <span class="amount">29</span>
+                    <span class="period">/month</span>
+                </div>
+                <ul class="features-list">
+                    <li>✓ 5 Projects</li>
+                    <li>✓ Basic Support</li>
+                    <li>✓ 10GB Storage</li>
+                    <li>✗ Advanced Analytics</li>
+                </ul>
+                <button class="btn btn-secondary">Get Started</button>
+            </div>
+            <div class="pricing-card featured">
+                <div class="badge">Most Popular</div>
+                <h3>Professional</h3>
+                <div class="price">
+                    <span class="currency">$</span>
+                    <span class="amount">79</span>
+                    <span class="period">/month</span>
+                </div>
+                <ul class="features-list">
+                    <li>✓ Unlimited Projects</li>
+                    <li>✓ Priority Support</li>
+                    <li>✓ 500GB Storage</li>
+                    <li>✓ Advanced Analytics</li>
+                </ul>
+                <button class="btn btn-primary">Get Started</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <div class="price">
+                    <span class="currency">$</span>
+                    <span class="amount">Custom</span>
+                    <span class="period">Contact us</span>
+                </div>
+                <ul class="features-list">
+                    <li>✓ Everything Pro</li>
+                    <li>✓ Dedicated Support</li>
+                    <li>✓ Unlimited Storage</li>
+                    <li>✓ Custom Integration</li>
+                </ul>
+                <button class="btn btn-secondary">Contact Sales</button>
+            </div>
+        </div>
+    </section>
 
-<section id="workflow" class="section dark">
-  <h2 class="section-title reveal">Workflows intelligents</h2>
-  <div class="workflow-visual reveal delay1"></div>
-</section>
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Ready to Transform Your Digital Presence?</h2>
+        <p>Join thousands of satisfied customers using Zefium Hub</p>
+        <button class="btn btn-primary btn-large">Start Your Journey Today</button>
+    </section>
 
-<section id="pricing" class="section">
-  <h2 class="section-title reveal">Tarifs</h2>
-  <div class="pricing-card reveal delay1">
-    <h3>Pro</h3>
-    <p class="price">49€/mois</p>
-    <button class="btn-primary">Choisir</button>
-  </div>
-</section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>We'd love to hear from you</p>
+        </div>
+        <div class="contact-content">
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <div>
+                        <h4>Address</h4>
+                        <p>123 Innovation Street, Tech City, TC 12345</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📧</span>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hello@zefiumhub.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📞</span>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Zefium Hub</h4>
+                <p>Transforming digital experiences worldwide</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zefium Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla.tilt.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
