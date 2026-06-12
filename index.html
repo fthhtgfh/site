@@ -1,373 +1,126 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zefium — = Roblox</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <title>Oryzo-like Landing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="nav">
+    <div class="logo">Oryzo<span>.</span></div>
+    <nav>
+      <a href="#features">Fonctionnalités</a>
+      <a href="#usecases">Cas d’usage</a>
+      <a href="#pricing">Tarifs</a>
+      <a href="#contact" class="btn-outline">Se connecter</a>
+    </nav>
+  </header>
 
-<header class="top-shell">
-  <nav>
-    <div class="logo">ZEF<span>IUM</span></div>
-
-    <button class="nav-toggle" aria-label="Ouvrir le menu">
-      <span></span>
-      <span></span>
-    </button>
-
-    <div class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#scripts">Scripts</a>
-      <a href="#pricing">Pricing</a>
-    </div>
-    <a href="#pricing" class="nav-cta">Get Access</a>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <div class="grid-lines"></div>
-      <div class="orb orb1"></div>
-      <div class="orb orb2"></div>
-      <div class="hero-glow hero-glow-1"></div>
-      <div class="hero-glow hero-glow-2"></div>
-    </div>
-
-    <div class="hero-content">
-      <div class="badge">⚡ v3.2 — Now Live</div>
-      <h1>
-        The last<br/>
-        <span class="gradient-text">Roblox script</span><br/>
-        hub you'll need.
-      </h1>
-      <p class="hero-sub">
-        Premium scripts. Instant execution. Zero detections.<br/>
-        Built for players who don't settle.
-      </p>
-
-      <div class="hero-ctas">
-        <a href="#pricing" class="btn-primary">
-          Start for free
-          <span class="btn-arrow">→</span>
-          <span class="btn-glow"></span>
-        </a>
-        <a href="#scripts" class="btn-ghost">Browse scripts</a>
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Accélérez vos décisions avec l’IA.</h1>
+        <p>
+          Une plateforme intelligente pour analyser vos données, automatiser vos workflows
+          et prendre de meilleures décisions en quelques secondes.
+        </p>
+        <div class="hero-actions">
+          <button id="cta-demo" class="btn-primary">Demander une démo</button>
+          <button id="cta-docs" class="btn-ghost">Voir la documentation</button>
+        </div>
+        <p class="hero-note">Aucune carte bancaire requise. Essai gratuit 14 jours.</p>
       </div>
-
-      <div class="hero-stats">
-        <div class="stat">
-          <span>12K+</span>
-          <label>Active users</label>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span>500+</span>
-          <label>Scripts</label>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span>99.9%</span>
-          <label>Uptime</label>
-        </div>
-      </div>
-
-      <div class="hero-meta">
-        <div class="meta-pill">
-          <span class="dot-online"></span>
-          Live status: <strong>All systems operational</strong>
-        </div>
-        <div class="meta-pill subtle">
-          Trusted by <strong>top Roblox executors</strong>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-visual">
-      <div class="code-shell">
-        <div class="code-window">
-          <div class="window-bar">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-            <span class="window-title">zefium.lua</span>
-          </div>
-          <div class="code-body">
-            <div class="code-line"><span class="c-comment">-- Zefium Script Hub v3.2</span></div>
-            <div class="code-line"><span class="c-keyword">local</span> <span class="c-var">Zefium</span> <span class="c-op">=</span> <span class="c-fn">loadstring</span><span class="c-paren">(</span></div>
-            <div class="code-line indent"><span class="c-fn">game</span><span class="c-op">:</span><span class="c-fn">HttpGet</span><span class="c-paren">(</span></div>
-            <div class="code-line indent2"><span class="c-str">"https://zefium.gg/loader"</span></div>
-            <div class="code-line indent"><span class="c-paren">)</span></div>
-            <div class="code-line"><span class="c-paren">)()</span></div>
-            <div class="code-line">&nbsp;</div>
-            <div class="code-line"><span class="c-comment">-- Initialize hub</span></div>
-            <div class="code-line"><span class="c-var">Zefium</span><span class="c-op">.</span><span class="c-fn">Load</span><span class="c-paren">({</span></div>
-            <div class="code-line indent"><span class="c-key">theme</span> <span class="c-op">=</span> <span class="c-str">"light"</span><span class="c-op">,</span></div>
-            <div class="code-line indent"><span class="c-key">autoExec</span> <span class="c-op">=</span> <span class="c-keyword">true</span></div>
-            <div class="code-line"><span class="c-paren">})</span></div>
-            <div class="cursor-line"><span class="c-comment">-- </span><span class="cursor">|</span></div>
+      <div class="hero-visual">
+        <div class="card">
+          <h3>Dashboard IA</h3>
+          <p>Insights en temps réel, recommandations et alertes intelligentes.</p>
+          <div class="metrics">
+            <div>
+              <span class="metric-label">Temps gagné</span>
+              <span class="metric-value">+42%</span>
+            </div>
+            <div>
+              <span class="metric-label">Tâches auto.</span>
+              <span class="metric-value">1 280 / mois</span>
+            </div>
           </div>
         </div>
+        <div class="floating-tag">⚡ Automatisation no-code</div>
+      </div>
+    </section>
 
-        <div class="code-footer">
-          <div class="code-pill">
-            <span class="pill-dot green"></span>
-            Safe & obfuscated loader
-          </div>
-          <div class="code-pill">
-            <span class="pill-dot blue"></span>
-            Auto-updates enabled
-          </div>
+    <section id="features" class="section">
+      <h2>Fonctionnalités clés</h2>
+      <div class="grid-3">
+        <div class="feature-card">
+          <h3>Analyse intelligente</h3>
+          <p>Connectez vos sources de données et obtenez des insights en langage naturel.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Workflows automatisés</h3>
+          <p>Créez des scénarios d’automatisation sans écrire une seule ligne de code.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Sécurité entreprise</h3>
+          <p>Chiffrement, gestion des accès et conformité pour les équipes exigeantes.</p>
         </div>
       </div>
+    </section>
 
-      <div class="floating-tag tag1">ESP ✓</div>
-      <div class="floating-tag tag2">Aimbot ✓</div>
-      <div class="floating-tag tag3">Auto Farm ✓</div>
-    </div>
-  </section>
-</header>
-
-<!-- FEATURES -->
-<section class="features" id="features">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-label">// FEATURES</div>
-      <h2>Everything you need.<br/><span class="gradient-text">Nothing you don't.</span></h2>
-      <p class="section-sub">
-        Zefium is built like a product, not a pastebin. Clean UI, safe loader, and scripts that just work.
-      </p>
-    </div>
-
-    <div class="features-grid">
-      <div class="feature-card feature-big">
-        <div class="feature-icon">🛡️</div>
-        <h3>Undetected by default</h3>
-        <p>Our scripts are tested daily against the latest Roblox patches. If something breaks, it's fixed within hours — not days.</p>
-        <div class="feature-pill">Updated daily</div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <h3>Instant execution</h3>
-        <p>One click. No setup. Scripts load in under 200ms.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🎮</div>
-        <h3>500+ games supported</h3>
-        <p>Blox Fruits, Pet Simulator, Arsenal, Brookhaven and more.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🔄</div>
-        <h3>Auto-updates</h3>
-        <p>Scripts update silently in the background. Always the latest version.</p>
-      </div>
-
-      <div class="feature-card feature-big feature-right">
-        <div class="feature-icon">💻</div>
-        <h3>Works with any executor</h3>
-        <p>Synapse X, KRNL, Fluxus, Arceus X — Zefium runs on all major executors with zero config.</p>
-        <div class="executor-list">
-          <span>Synapse X</span>
-          <span>KRNL</span>
-          <span>Fluxus</span>
-          <span>Arceus X</span>
+    <section id="usecases" class="section alt">
+      <h2>Cas d’usage</h2>
+      <div class="grid-2">
+        <div class="usecase">
+          <h3>Ops & Finance</h3>
+          <p>Suivi des KPI, prévisions et alertes automatiques sur les dérives budgétaires.</p>
+        </div>
+        <div class="usecase">
+          <h3>Produit & Data</h3>
+          <p>Analyse comportement utilisateur, tests A/B et recommandations produit.</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="feature-strip">
-      <span>Zero key system</span>
-      <span>•</span>
-      <span>Cloud-based config</span>
-      <span>•</span>
-      <span>Auto script recovery</span>
-      <span>•</span>
-      <span>Discord status integration</span>
-    </div>
-  </div>
-</section>
-
-<!-- SCRIPTS -->
-<section class="scripts" id="scripts">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-label">// POPULAR SCRIPTS</div>
-      <h2>Top scripts<br/>this week.</h2>
-      <p class="section-sub">
-        Curated, tested, and updated. These are the scripts players keep coming back to.
-      </p>
-    </div>
-
-    <div class="scripts-grid">
-      <div class="script-card">
-        <div class="script-header">
-          <div class="game-badge blox">🍈 Blox Fruits</div>
-          <div class="script-tag free">FREE</div>
-        </div>
-        <h4>Auto Farm + Boss Killer</h4>
-        <p>Level up and grind fruit automatically. Includes boss detection and auto-respawn.</p>
-        <div class="script-footer">
-          <span>⭐ 4.9</span>
-          <span>8.2k uses</span>
-          <a href="#pricing" class="script-btn">Execute →</a>
-        </div>
-      </div>
-
-      <div class="script-card">
-        <div class="script-header">
-          <div class="game-badge pet">🐾 Pet Simulator X</div>
-          <div class="script-tag free">FREE</div>
-        </div>
-        <h4>Auto Hatch + Collect</h4>
-        <p>Auto hatch eggs, collect coins and gems. Works on all worlds.</p>
-        <div class="script-footer">
-          <span>⭐ 4.8</span>
-          <span>6.1k uses</span>
-          <a href="#pricing" class="script-btn">Execute →</a>
-        </div>
-      </div>
-
-      <div class="script-card">
-        <div class="script-header">
-          <div class="game-badge ars">🎯 Arsenal</div>
-          <div class="script-tag pro">PRO</div>
-        </div>
-        <h4>Silent Aim + ESP</h4>
-        <p>Full ESP with box/name/health + silent aim with customizable FOV.</p>
-        <div class="script-footer">
-          <span>⭐ 5.0</span>
-          <span>3.4k uses</span>
-          <a href="#pricing" class="script-btn">Execute →</a>
-        </div>
-      </div>
-
-      <div class="script-card">
-        <div class="script-header">
-          <div class="game-badge brook">🏡 Brookhaven</div>
-          <div class="script-tag free">FREE</div>
-        </div>
-        <h4>Admin + Troll GUI</h4>
-        <p>Full admin panel, speed hacks, fly, and troll options.</p>
-        <div class="script-footer">
-          <span>⭐ 4.7</span>
-          <span>11k uses</span>
-          <a href="#pricing" class="script-btn">Execute →</a>
-        </div>
-      </div>
-
-      <div class="script-card">
-        <div class="script-header">
-          <div class="game-badge adopt">🦆 Adopt Me</div>
-          <div class="script-tag pro">PRO</div>
-        </div>
-        <h4>Auto Tasks + Money Farm</h4>
-        <p>Complete all tasks automatically and farm bucks 24/7.</p>
-        <div class="script-footer">
-          <span>⭐ 4.9</span>
-          <span>5.7k uses</span>
-          <a href="#pricing" class="script-btn">Execute →</a>
-        </div>
-      </div>
-
-      <div class="script-card script-card-cta">
-        <div class="script-cta-inner">
-          <span>500+ more scripts</span>
-          <p>Unlock the full library with a Pro key.</p>
-          <a href="#pricing" class="btn-primary small">
-            Get Pro
-            <span class="btn-arrow">→</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing" id="pricing">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-label">// PRICING</div>
-      <h2>Simple pricing.<br/><span class="gradient-text">Real value.</span></h2>
-      <p class="section-sub">
-        No hidden fees, no key system, no bullshit. Pick what fits you and start executing.
-      </p>
-    </div>
-
-    <div class="pricing-grid">
-      <div class="plan-card">
-        <div class="plan-name">Free</div>
-        <div class="plan-price">$0<span>/mo</span></div>
-        <ul class="plan-features">
-          <li>✓ 50+ free scripts</li>
-          <li>✓ Works on all executors</li>
-          <li>✓ Auto-updates</li>
-          <li class="disabled">✗ Pro scripts</li>
-          <li class="disabled">✗ Priority support</li>
-          <li class="disabled">✗ Early access</li>
+    <section id="pricing" class="section">
+      <h2>Tarifs simples et transparents</h2>
+      <div class="pricing-card">
+        <h3>Pro</h3>
+        <p class="price">49€ / mois</p>
+        <ul>
+          <li>Jusqu’à 5 membres</li>
+          <li>Workflows illimités</li>
+          <li>Support email prioritaire</li>
         </ul>
-        <a href="#" class="btn-ghost full">Get started</a>
+        <button class="btn-primary">Commencer</button>
       </div>
+    </section>
 
-      <div class="plan-card plan-featured">
-        <div class="plan-badge">Most popular</div>
-        <div class="plan-name">Pro</div>
-        <div class="plan-price">$4.99<span>/mo</span></div>
-        <ul class="plan-features">
-          <li>✓ 500+ scripts</li>
-          <li>✓ Works on all executors</li>
-          <li>✓ Auto-updates</li>
-          <li>✓ All Pro scripts</li>
-          <li>✓ Priority Discord support</li>
-          <li>✓ Early access betas</li>
-        </ul>
-        <a href="#" class="btn-primary full">
-          Get Pro
-          <span class="btn-arrow">→</span>
-        </a>
-      </div>
+    <section id="contact" class="section alt">
+      <h2>Parlons de votre cas</h2>
+      <form id="contact-form">
+        <div class="form-row">
+          <label>Adresse email</label>
+          <input type="email" id="email" required placeholder="vous@entreprise.com">
+        </div>
+        <div class="form-row">
+          <label>Message</label>
+          <textarea id="message" rows="4" placeholder="Décrivez votre besoin..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Envoyer</button>
+        <p id="form-status" class="form-status"></p>
+      </form>
+    </section>
+  </main>
 
-      <div class="plan-card">
-        <div class="plan-name">Lifetime</div>
-        <div class="plan-price">$19.99<span> once</span></div>
-        <ul class="plan-features">
-          <li>✓ Everything in Pro</li>
-          <li>✓ Lifetime updates</li>
-          <li>✓ VIP Discord role</li>
-          <li>✓ Request custom scripts</li>
-          <li>✓ Direct dev support</li>
-          <li>✓ Never pay again</li>
-        </ul>
-        <a href="#" class="btn-ghost full">Get Lifetime</a>
-      </div>
-    </div>
+  <footer class="footer">
+    <span>© 2026 Oryzo-like. Tous droits réservés.</span>
+    <span class="footer-links">
+      <a href="#">Confidentialité</a>
+      <a href="#">Conditions</a>
+    </span>
+  </footer>
 
-    <div class="pricing-note">
-      <span class="dot-online"></span>
-      Keys delivered instantly after purchase. No waiting, no ticket spam.
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-left">
-    <div class="footer-logo">ZEF<span>IUM</span></div>
-    <p class="footer-note">© 2025 Zefium. For educational purposes only.</p>
-  </div>
-  <div class="footer-links">
-    <a href="#">Discord</a>
-    <a href="#">Terms</a>
-    <a href="#">Status</a>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
